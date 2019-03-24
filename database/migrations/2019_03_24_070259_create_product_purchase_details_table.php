@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUnitsTable extends Migration
+class CreateProductPurchaseDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,14 @@ class CreateUnitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('units', function (Blueprint $table) {
+        Schema::create('product_purchase_details', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('unit_name');
+            $table->integer('purchase_id');
+            $table->integer('product_id');
+            $table->float('quantity');
+            $table->float('rate');
+            $table->float('total_amount');
+            $table->float('discount');
             $table->boolean('status')->default(true);
             $table->timestamps();
         });
@@ -28,6 +33,6 @@ class CreateUnitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('units');
+        Schema::dropIfExists('product_purchase_details');
     }
 }

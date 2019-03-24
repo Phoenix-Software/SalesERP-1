@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUnitsTable extends Migration
+class CreateCompanyInformationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateUnitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('units', function (Blueprint $table) {
+        Schema::create('company_informations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('unit_name');
+            $table->string('company_name');
+            $table->string('email', 100);
+            $table->text('address');
+            $table->string('mobile');
+            $table->string('website');
             $table->boolean('status')->default(true);
             $table->timestamps();
         });
@@ -28,6 +32,6 @@ class CreateUnitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('units');
+        Schema::dropIfExists('company_informations');
     }
 }

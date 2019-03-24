@@ -42,7 +42,7 @@
 					  </div>
 					</div>
 
-					<div class="form-group row">
+<!-- 					<div class="form-group row">
 					  <label for="input-4" class="col-sm-2 col-form-label">Status :</label>
 					  <div class="col-sm-6">
 						<select name="status" class="form-control">
@@ -50,7 +50,7 @@
 							<option value="0">Unactive</option>
 						</select>
 					  </div>
-					</div>
+					</div> -->
 
 					<div class="form-group row">
 					  <label for="input-1" class="col-sm-2 col-form-label"></label>

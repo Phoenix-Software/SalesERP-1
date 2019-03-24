@@ -14,7 +14,6 @@ class unitController extends Controller
     public function save(Request $request){
     	$unitadd = new unit();
     	$unitadd->unit_name = $request->unitName;
-    	$unitadd->status = $request->status;
     	$unitadd->save();
 
     	return redirect('/unit/manage')->with('message','Unit added Successfully.');

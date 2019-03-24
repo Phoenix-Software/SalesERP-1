@@ -1,7 +1,7 @@
    <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
      <div class="brand-logo">
       <a href="{{ url('/login')}}">
-       <img src="{{ asset('admin') }}/assets/images/logo1.png" class="logo-icon" alt="logo icon">
+       <img src="{{ asset('admin') }}/assets/images/logo.png" class="logo-icon" alt="logo icon">
      </a>
 	 </div>
 	 <ul class="sidebar-menu do-nicescrol">

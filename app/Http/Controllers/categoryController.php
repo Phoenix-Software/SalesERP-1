@@ -14,7 +14,6 @@ class categoryController extends Controller
     public function save(Request $request){
     	$categoryadd = new category();
     	$categoryadd->category_name = $request->categoryName;
-    	$categoryadd->status = $request->status;
     	$categoryadd->save();
 
     	return redirect('/category/manage')->with('message','Category added Successfully.');

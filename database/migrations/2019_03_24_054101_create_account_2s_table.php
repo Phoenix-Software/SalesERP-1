@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUnitsTable extends Migration
+class CreateAccount2sTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateUnitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('units', function (Blueprint $table) {
+        Schema::create('account_2s', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('unit_name');
+            $table->string('account_name');
+            $table->string('parent_id');
             $table->boolean('status')->default(true);
             $table->timestamps();
         });
@@ -28,6 +29,6 @@ class CreateUnitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('units');
+        Schema::dropIfExists('account_2s');
     }
 }

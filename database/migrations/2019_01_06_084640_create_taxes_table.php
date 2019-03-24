@@ -16,7 +16,7 @@ class CreateTaxesTable extends Migration
         Schema::create('taxes', function (Blueprint $table) {
             $table->increments('id');
             $table->float('tax')->nullable();
-            $table->tinyInteger('status')->nullable();
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

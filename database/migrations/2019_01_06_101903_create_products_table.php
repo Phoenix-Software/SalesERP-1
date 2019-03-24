@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
             $table->string('product_model');
             $table->string('product_details');
             $table->string('image')->nullable();
-            $table->tinyInteger('status');
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

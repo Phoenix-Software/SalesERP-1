@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUnitsTable extends Migration
+class CreateSynchronizerSettingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateUnitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('units', function (Blueprint $table) {
+        Schema::create('synchronizer_settings', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('unit_name');
-            $table->boolean('status')->default(true);
+            $table->string('hostname');
+            $table->string('username');
+            $table->string('password');
+            $table->string('port');
+            $table->string('debug');
+            $table->string('project_root');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ class CreateUnitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('units');
+        Schema::dropIfExists('synchronizer_settings');
     }
 }

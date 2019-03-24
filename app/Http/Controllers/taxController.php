@@ -14,7 +14,6 @@ class taxController extends Controller
     public function save(Request $request){
     	$taxes = new tax();
     	$taxes->tax = $request->taxName;
-    	$taxes->status = $request->status;
     	$taxes->save();
 
     	return redirect('/tax/manage')->with('message','Tax Added Successfully');
