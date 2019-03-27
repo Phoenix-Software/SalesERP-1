@@ -61,19 +61,20 @@
 							<option value="0">Unactive</option>
 						</select>
 					  </div>
-					</div>
+					</div>-->
                         <div class="form-group row">
                             <label for="previous_balance" class="col-sm-3 col-form-label">Previous Credit Balance</label>
                             <div class="col-sm-6">
                                 <input class="form-control" name="previous_balance" id="previous_balance" type="text" placeholder="Previous Credit Balance" tabindex="5">
                             </div>
-                        </div> -->
+                        </div> 
 					<div class="form-group row">
-					  <label for="input-1" class="col-sm-3 col-form-label"></label>
-					  <div class="col-sm-6">
-						<button type="submit" class="btn btn-primary shadow-primary px-5"></i> Save</button>
-					  </div>
-					</div>
+                            <label for="example-text-input" class="col-sm-4 col-form-label"></label>
+                            <div class="col-sm-6">
+                                <input type="reset" class="btn btn-danger" value="Reset" tabindex="6"/>
+                                <input type="submit" id="add-deposit" class="btn btn-info" name="add-deposit" value="Save" tabindex="7"/>
+                            </div>
+                        </div>
 					{!! Form::close() !!}
 				 </div>
 			   </div>

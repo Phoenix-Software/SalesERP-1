@@ -19,7 +19,8 @@ class CreateBankAddsTable extends Migration
             $table->string('ac_name');
             $table->string('ac_number');
             $table->string('branch');
-            $table->string('signature_pic');
+            $table->string('address')->nullable();
+            $table->float('opening_balance')->nullable();
             $table->boolean('status')->default(true);
             $table->timestamps();
         });

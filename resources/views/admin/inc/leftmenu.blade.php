@@ -103,7 +103,6 @@
         <li><a href="{{ url('/wastage/return/list') }}"><i class="fa fa-circle-o"></i> Wastage Return List</a></li>
         </ul>
       </li>
-
       <li>
         <a href="javaScript:void();" class="waves-effect">
           <i class="fa fa-money"></i>
@@ -118,18 +117,15 @@
         <li><a href="#"><i class="fa fa-circle-o"></i> Closing</a></li>
         <li class="waves-effect"><a href="#" style="position: relative;"><i class="fa fa-circle-o"></i> Report <span class="pull-right-container"> </span>
         </a>
-
           <ul class="sidebar-submenu">
             <li><a href=""><i class="fa fa-circle-o"></i> Daily Summary</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Daily Cash Flow</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Closing Report</a></li>
           </ul>
-
         <li><a href="{{ url('/tax/add') }}"><i class="fa fa-circle-o"></i> Add Tax</a></li>
         <li><a href="{{ url('/tax/manage') }}"><i class="fa fa-circle-o"></i> Manage Tax</a></li>
         </ul>
       </li>
-
       <li>
         <a href="javaScript:void();" class="waves-effect">
           <i class="ti-book"></i>
@@ -164,9 +160,9 @@
           <span>Bank</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="sidebar-submenu">
-        <li><a href="#"><i class="fa fa-circle-o"></i> Add New Bank</a></li>
-        <li><a href="#"><i class="fa fa-circle-o"></i> Bank Transaction</a></li>
-        <li><a href="#"><i class="fa fa-circle-o"></i> Manage Bank</a></li>
+        <li><a href="{{ url('bank/add') }}"><i class="fa fa-circle-o"></i> Add New Bank</a></li>
+        <li><a href="{{ url('/bank/transaction') }}"><i class="fa fa-circle-o"></i> Bank Transaction</a></li>
+        <li><a href="{{ url('bank/manage') }}"><i class="fa fa-circle-o"></i> Manage Bank</a></li>
         </ul>
       </li>
 

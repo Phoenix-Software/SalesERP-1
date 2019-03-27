@@ -69,6 +69,15 @@ Route::post('/product/update','productController@update');
 Route::get('/product/delete/{id}', 'productController@delete');
 /*end Product*/
 
+/*start bank*/
+Route::get('/bank/add', 'bankController@index');
+Route::post('/bank/save', 'bankController@save');
+Route::get('/bank/manage', 'bankController@manage');
+Route::get('/bank/edit/{id}','bankController@edit');
+Route::post('/bank/update','bankController@update');
+Route::get('/bank/transaction', 'bankController@transaction');
+/*end bank*/
+
 
 Route::get('/live_search', 'LiveSearch@index');
 Route::get('/live_search/action', 'LiveSearch@action')->name('live_search.action');

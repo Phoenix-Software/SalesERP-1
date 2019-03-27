@@ -7,12 +7,7 @@
 @section('mainContent')
 
 <br>
-
-
     <section class="content">
-
-        <!-- Alert Message -->
-        
         <div class="row">
             <div class="col-sm-12">
                 <div class="column">
@@ -22,16 +17,11 @@
                 </div>
             </div>
         </div>
-
         <br>
-
-
 	<div class="card">
 			     <div class="card-body">
 				   <div class="card-title">Add new product</div>
 				   <hr>				  
-
-
 			   <!-- Add Product -->
         <div class="row">
             <div class="col-sm-12">
@@ -75,19 +65,15 @@
                                 <div class="form-group row">
                                     <label for="category_id" class="col-sm-4 col-form-label">Category : </label>
                                     <div class="col-sm-8">
-                                        <select class="form-control" id="category_id" name="category_id" tabindex="3">                                        
-                                                <option value="">@foreach ($category as $category)
-                                                                    {{ $category->category_name }}
-                                                                @endforeach
-                                                </option>
+                                        <select class="form-control" id="category_id" name="category_id" tabindex="3">
+                                        @foreach ($category as $category)                                     
+                                            <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                        @endforeach
                                         </select>
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>                        
-
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group row">
@@ -124,7 +110,7 @@
                                     <div class="col-sm-8">
                                         <select name="tax" id="tax" class="form-control dont-select-me" required="" tabindex="8">
                                             <option value=" ">Select One</option>
-                                            <option value="2">2%</option>                                              
+                                            <option value="2">2%</option>                                
                                         </select>
                                     </div>
                                 </div> 
@@ -162,15 +148,6 @@
                             </table>
                         </div>
                         <br>
-                        <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">Status :</label>
-					  <div class="col-sm-6">
-						<select name="status" class="form-control">
-							<option value="1">Active</option>
-							<option value="0">Unactive</option>
-						</select>
-					  </div>
-					</div>
                         <div class="row">
                             <div class="col-sm-12">
                                 <center><label for="description" class="col-form-label">Product Details</label></center>
@@ -180,8 +157,8 @@
 
                         <br>
                         <div class="form-group row">
-					  		<label for="input-1" class="col-sm-1 col-form-label"></label>
-					  		<div class="col-sm-12">
+					  		<label for="input-1" class="col-sm-4 col-form-label"></label>
+					  		<div class="col-sm-4">
 							<button type="submit" class="btn btn-primary shadow-primary px-5"></i> Add new product</button>
 					  	</div>
 					
