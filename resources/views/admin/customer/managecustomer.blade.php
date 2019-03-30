@@ -27,35 +27,15 @@
             <div class="col-sm-12">
                 <div class="column">
                     <a href="{{ url('/customer/add') }}" class="btn btn-info m-b-5 m-r-2"><i class="ti-plus"> </i> Add customer </a>
-                    <a href="#" class="btn btn-primary m-b-5 m-r-2"><i class="ti-align-justify"> </i>  Credit Customer </a>
+                    <a href="{{ url('/customer/credit') }}" class="btn btn-primary m-b-5 m-r-2"><i class="ti-align-justify"> </i>  Credit Customer </a>
 
-                    <a href="#" class="btn btn-warning m-b-5 m-r-2"><i class="ti-align-justify"> </i>  Paid Customer </a>
+                    <a href="{{ url('/customer/paid') }}" class="btn btn-warning m-b-5 m-r-2"><i class="ti-align-justify"> </i>  Paid Customer </a>
 
                 </div>
             </div>
         </div>
 <br>
 
-     <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body"> 
-
-                        <form action="#" class="form-inline" method="post" accept-charset="utf-8">
-
-                            <label class="select">Customer Name: </label>
-                            <select class="form-control" name="customer_id" style="width: 25%">
-                                
-                                <option value=""></option>
-                                {/all_customer_list}
-                            </select>
-                            <button type="submit" class="btn btn-primary" style="margin-left: 7px;">Search</button>
-
-                        </form>		            
-                    </div>
-                </div>
-            </div>
-        </div>
 
       <div class="row">
         <div class="col-sm-12">

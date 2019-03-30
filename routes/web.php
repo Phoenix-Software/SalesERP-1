@@ -47,6 +47,8 @@ Route::get('/customer/manage', 'customerController@manage');
 Route::get('/customer/edit/{id}','customerController@edit');
 Route::post('/customer/update','customerController@update');
 Route::get('/customer/delete/{id}', 'customerController@delete');
+Route::get('customer/credit', 'customerController@managecredit');
+Route::get('/customer/paid', 'customerController@managepaid');
 /*end customer*/
 
 

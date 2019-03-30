@@ -24,13 +24,13 @@ class customerController extends Controller
 
     public function manage(){
     	$customer_info = customer_info::all();
-    	return view('admin.customer.managecustomer')->with(['customer_info'  => $customer_info ]);
+    	return view('admin.customer.managecustomer', get_defined_vars());
     }
 
     public function edit($id){
         $customer_info = customer_info::where('id',$id)->first();
 
-        return view('admin.Customer.Customeredit')->with(['customer_info' => $customer_info]);
+        return view('admin.Customer.Customeredit', get_defined_vars());
     }
 
     public function update(Request $request){
@@ -51,5 +51,15 @@ class customerController extends Controller
         $customer_info->delete();
 
         return redirect('/Customer/manage')->with('message','Customer Information Deleted Successfully.');
+    }
+
+    public function managecredit(){
+        $customer_info = customer_info::all();
+        return view('admin.customer.creditcustomer', get_defined_vars());
+    }
+
+    public function managepaid(){
+        $customer_info = customer_info::all();
+        return view('admin.customer.paidcustomer', get_defined_vars());
     }
 }
