@@ -172,8 +172,10 @@
           <span>Office Loan</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="sidebar-submenu">
-        <li><a href="#"><i class="fa fa-circle-o"></i> Add Person</a></li>
-        <li><a href="#"><i class="fa fa-circle-o"></i> Manage Loan</a></li>
+        <li><a href="{{ url('/officeloan/add') }}"><i class="fa fa-circle-o"></i> Add Person</a></li>
+        <li><a href="{{ url('/officeloan/loan') }}"><i class="fa fa-circle-o"></i> Add Loan</a></li>
+        <li><a href="{{ url('/officeloan/payment') }}"><i class="fa fa-circle-o"></i> Add Payment</a></li>
+        <li><a href="{{ url('/officeloan/manage') }}"><i class="fa fa-circle-o"></i> Manage Loan</a></li>
         </ul>
       </li>
 

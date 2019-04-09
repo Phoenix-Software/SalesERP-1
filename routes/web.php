@@ -11,6 +11,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+/* Add invoice */
+Route::get('/invoice/new', 'invoiceController@index');
+Route::post('/invoice/manage', 'invoiceController@save');
+Route::get('/invoice/pos', 'invoiceController@pos');
+Route::get('/invoice/edit/{id}', 'invoiceController@edit');
+Route::post('/invoice/edit', 'invoiceController@update');
+Route::get('/invoice/delete/{id}', 'invoiceController@delete');
+/* End invoice */
+
 
 /* Add category */
 Route::get('/category/save', 'categoryController@index');
@@ -79,6 +88,18 @@ Route::get('/bank/edit/{id}','bankController@edit');
 Route::post('/bank/update','bankController@update');
 Route::get('/bank/transaction', 'bankController@transaction');
 /*end bank*/
+
+/*Office loan start*/
+Route::get('/officeloan/add', 'officeloadController@index');
+Route::post('/officeloan/save', 'officeloadController@save');
+Route::get('/officeloan/loan', 'officeloadController@loan');
+Route::get('/officeloan/payment', 'officeloadController@payment');
+Route::get('/loan/manage', 'officeloadController@manageloan');
+Route::get('/officeloan/manage', 'officeloadController@manage');
+Route::get('/officeloan/edit/{id}','officeloadController@edit');
+Route::post('/officeloan/update','officeloadController@update');
+Route::get('/officeloan/transaction', 'officeloadController@transaction');
+/*Office loan end*/
 
 
 Route::get('/live_search', 'LiveSearch@index');
